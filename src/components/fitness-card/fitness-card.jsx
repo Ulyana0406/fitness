@@ -1,11 +1,12 @@
-import * as S from './fitness-card.styles'
 
+import * as S from './fitness-card.styles'
+import styles from'./fitness-card.module.css'
 export const FitnessCard = ({title, img, path}) => {
     return (
-        <S.FitnessCard to={`/course/${path}`}>
-            <S.FitnessCardTitle>
+        <S.FitnessCard to={`/course/${path}`}> //вот тут я хрен знает как сделать , там NavLink
+            <h className={styles.fitnessCardTitle}>
                 {title}
-            </S.FitnessCardTitle>
+            </h>
             <img src={`/img/${img}.svg`} alt={title} />
         </S.FitnessCard>
     )

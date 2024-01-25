@@ -1,0 +1,11 @@
+.fitnessCardTitle {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 2;
+    color: var(--monochrome-black-20);
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+}

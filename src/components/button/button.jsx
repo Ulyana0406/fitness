@@ -1,5 +1,6 @@
-import { Button } from "./button.style"
+
+import styles from "./button.module.css"
 
 export const BaseButton = ({theme, text, action}) => {
-    return <Button onClick={action} $theme={theme}>{text}</Button>
+    return <button className={styles.button}  onClick={action} $theme={theme}>{text}</button>
 }

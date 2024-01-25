@@ -1,23 +1,23 @@
 import * as S from '../nav-menu/nav-menu.styles';
-
+import styles from './nav-menu.css'
 export const NavMenu = ({page}) => {
   const handleLogout = () => {
     localStorage.removeItem('auth');
   }
 
   return (
-    <S.NavMenu>
-      <S.MenuList>
-        <S.MenuItem>
+    <div className={styles.navMenu}>
+      <ul className={styles.menuList}>
+        <li class= {styles.menuItem}>
           <S.MenuLink to="/" page={page} >На главную</S.MenuLink>
-        </S.MenuItem>
-        <S.MenuItem>
+        </li>
+        <li class= {styles.menuItem}>
           <S.MenuLink to="/profile" page={page} >Профиль</S.MenuLink>
-        </S.MenuItem>
-        <S.MenuItem  onClick={() => handleLogout()}> 
+          </li>
+        <li class= {styles.menuItem}  onClick={() => handleLogout()}> 
           <S.MenuLink to="/auth" page={page} >Выйти</S.MenuLink>
-        </S.MenuItem>
-      </S.MenuList>
-    </S.NavMenu>
+        </li>
+      </ul>
+    </div>
   )
 }    
