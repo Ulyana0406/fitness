@@ -57,17 +57,17 @@ export const UpdateUserData = ({isLoginMode, setIsActive}) => {
   }
 
   return (
-      <S.PageContainer>
-        <S.ModalForm>
-          <S.PageClose onClick={() => setIsActive(false)}>
+      <div className={styles.pageContainer}>
+        <div className={styles.modalForm}>
+          <div className={styles.pageClose} onClick={() => setIsActive(false)}>
             <svg width="20px" height="20px" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_iconCarrier"><g id="Page-1" stroke="none" fill="none"  ><g id="Icon-Set-Filled"  transform="translate(-469.000000, -1041.000000)" fill="#b1aaaa"><path d="M487.148,1053.48 L492.813,1047.82 C494.376,1046.26 494.376,1043.72 492.813,1042.16 C491.248,1040.59 488.712,1040.59 487.148,1042.16 L481.484,1047.82 L475.82,1042.16 C474.257,1040.59 471.721,1040.59 470.156,1042.16 C468.593,1043.72 468.593,1046.26 470.156,1047.82 L475.82,1053.48 L470.156,1059.15 C468.593,1060.71 468.593,1063.25 470.156,1064.81 C471.721,1066.38 474.257,1066.38 475.82,1064.81 L481.484,1059.15 L487.148,1064.81 C488.712,1066.38 491.248,1066.38 492.813,1064.81 C494.376,1063.25 494.376,1060.71 492.813,1059.15 L487.148,1053.48" id="cross" ></path></g></g></g></svg>
-          </S.PageClose>
+          </div>
           <Logo theme="black"/>
           {isLoginMode ? (
           <>
-            <S.Inputs>
-              <S.InputTitle>Новый логин:</S.InputTitle>
-                <S.ModalInput
+            <div className={styles.inputs}>
+              <h1 className={styles.inputTitle}>Новый логин:</h1>
+                <input className={styles.modalInput}
                     type="text"
                     name="login"
                     placeholder="Логин"
@@ -76,22 +76,22 @@ export const UpdateUserData = ({isLoginMode, setIsActive}) => {
                     setLogin(event.target.value)
                     }}
                 />
-            </S.Inputs>
-            {error && <S.Error>{error}</S.Error>}
-            <S.Buttons>
-              <S.PrimaryButton
+            </div>
+            {error && <div className={styles.error}>{error}</div>}
+            <div className={styles.buttons}>
+              <button className={styles.primaryButton}
                   disabled={buttonActive}
                   onClick={() => handleLogin({ login })}
               >
                   {buttonActive ? 'Сохрание...' : 'Сохранить'}
-              </S.PrimaryButton>
-            </S.Buttons>
+              </button>
+            </div>
           </>
           ) : (
             <>
-              <S.Inputs>
-                <S.InputTitle>Новый пароль:</S.InputTitle>
-                <S.ModalInput
+              <div className={styles.inputs}>
+                <h1 className={styles.inputTitle}>Новый пароль:</h1>
+                <input className={styles.modalInput}
                     type="new-password"
                     name="password"
                     placeholder="Пароль"
@@ -100,7 +100,7 @@ export const UpdateUserData = ({isLoginMode, setIsActive}) => {
                     setPassword(event.target.value)
                     }}
                 />
-                <S.ModalInput
+                <input className={styles.modalInput}
                     type="new-password"
                     name="password"
                     placeholder="Повторите пароль"
@@ -109,18 +109,18 @@ export const UpdateUserData = ({isLoginMode, setIsActive}) => {
                     setRepeatPassword(event.target.value)
                     }}
                 />
-              </S.Inputs>
-              {error && <S.Error>{error}</S.Error>}
-              <S.Buttons>
-                <S.PrimaryButton disabled={buttonActive} onClick={handleRegister}>
+              </div>
+              {error && <div className={styles.error}>{error}</div>}
+              <div className={styles.buttons}>
+                <button className={styles.primaryButton} disabled={buttonActive} onClick={handleRegister}>
                     {buttonActive
                     ? 'Сохрание...'
                     : 'Сохранить'}
-                </S.PrimaryButton>
-              </S.Buttons>
+                </button>
+              </div>
             </>
           )}
-        </S.ModalForm>
-      </S.PageContainer>
+        </div>
+      </div>
   )
 }

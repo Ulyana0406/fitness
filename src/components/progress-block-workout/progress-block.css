@@ -1,0 +1,120 @@
+.progressMain {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0px; 
+    top: 0px; 
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+
+
+.pageClose {position: absolute;
+    z-index: 999;
+    top: 0px;
+    right: 0px;
+    padding: 10px;
+    cursor: pointer;}
+  
+
+
+.progressBlock { 
+    background-color: white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 36px 42px 44px 44px;
+    position: relative;
+}
+ 
+
+
+.progressHeader{
+    font-size: 2rem;
+}
+  
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    margin-top: 30px;
+} 
+
+
+.modalInput { 
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #d0cece;
+    padding: 8px 1px;
+  
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.05px;
+    text-align: left;
+} 
+ 
+
+
+.modalInput::placeholder {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #d0cece;
+  }
+
+
+.modalInputHeader {
+    font-size: 1.25rem;
+    width: 370px;
+} 
+  
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  
+    width: 278px;
+    height: 52px;
+    border-radius: 46px;
+    border: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+} 
+ 
+
+.button:disabled {
+    background-color: #303030;
+  }
+
+
+.primaryButton {
+    color: #ffffff;
+    background-color: #580ea2;
+} 
+  
+.primaryButton:hover {
+    background-color: #3f007d;
+  }
+
+.primaryButton:active {
+    background-color: #271a58;
+  }

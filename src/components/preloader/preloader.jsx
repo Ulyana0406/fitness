@@ -1,9 +1,9 @@
 import * as S from './preloader.style';
-
+import styles from './preloader.css'
 export const Preloader = () => {
     return (
-        <S.Preloader>
-            <S.PreloaderWrapper>
+        <div className={styles.preloader}>
+            <div className={styles.preloaderWrapper}>
                 <svg width="10rem" height="10rem" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" color="white">
                     <g fill="none" fillRule="evenodd" strokeWidth="2">
                         <circle cx="22" cy="22" r="1">
@@ -16,7 +16,7 @@ export const Preloader = () => {
                         </circle>
                     </g>
                 </svg>
-            </S.PreloaderWrapper>
-        </S.Preloader>
+            </div>
+        </div>
     )
 }
