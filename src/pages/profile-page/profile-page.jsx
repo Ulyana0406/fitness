@@ -8,7 +8,7 @@ import { WorkoutsModal } from '../../components/workouts-modal/workouts-modal';
 import { useSelector, useDispatch } from 'react-redux'
 import { setAllWorkouts, setCurrentPage } from '../../store/slices/courses'
 import { currentCourseSelector } from '../../store/selectors/courses'
-
+import styles from './profile-page.css'
 export const ProfilePage = () => {
     const dispatch = useDispatch();
     const [isLoginMode, setIsLoginMode] = useState(null);
@@ -62,30 +62,30 @@ export const ProfilePage = () => {
 
     return (
             <MainLayout theme='white' isLoading={isLoading}>
-                <S.MainInfo>
-                    <S.MainTitle>Мой профиль</S.MainTitle>
-                    <S.MainTextBlock>
-                        <S.MainText>Логин: {user.userName}</S.MainText>
-                        <S.MainText>Пароль: 12345678</S.MainText>
-                    </S.MainTextBlock>
-                    <S.MainButtonBlock>
-                        <S.MainButton type="button" className="button" onClick={() => handleLoginClick()} >Изменить логин</S.MainButton>
-                        <S.MainButton type="button" className="button" onClick={() => handlePasswordClick()}>Изменить пароль</S.MainButton>
-                    </S.MainButtonBlock>
-                </S.MainInfo> 
-                <S.MainCards>
+                <div className={styles.mainInfo}>
+                    <h1 className={styles.mainTitle}>Мой профиль</h1>
+                    <div className={styles.mainTextBlock}>
+                        <p className={styles.mainText}>Логин: {user.userName}</p>
+                        <p>Пароль: 12345678</p>
+                    </div>
+                    <div className={styles.mainButtonBlock}>
+                        <button className={styles.mainButton} type="button"  onClick={() => handleLoginClick()} >Изменить логин</button>
+                        <button className={styles.mainButton} type="button"  onClick={() => handlePasswordClick()}>Изменить пароль</button>
+                    </div>
+                </div> 
+                <div>
                     {userFitnessCards.map(({title, img, id}) => {
                         return (
-                            <S.FitnessCard key={title} onClick={() => handleShowWorkoutsModal(id)}>
-                                <S.FitnessCardTitle>
+                            <div className={styles.fitnessCard} key={title} onClick={() => handleShowWorkoutsModal(id)}>
+                                <h3 className={styles.fitnessCardTitle}>
                                     {title}
-                                </S.FitnessCardTitle>
+                                </h3>
                                 <img src={`/img/${img}.svg`} alt={title} />
-                                <S.FitnessCardButton type="button">Перейти</S.FitnessCardButton>
-                            </S.FitnessCard>
+                                <button className={styles.fitnessCardButton} type="button">Перейти</button>
+                            </div>
                         )
                     })}
-                </S.MainCards>
+                </div>
                 {isActive && <UpdateUserData isLoginMode={isLoginMode} setIsActive={setIsActive}/> }
                 {isShowWorkouts && <WorkoutsModal action={handleShowWorkoutsModal} data={workoutsData} courseId={courseId} />}
             </MainLayout>

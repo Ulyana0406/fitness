@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setAllCourses, setCurrentPage } from '../../store/slices/courses'
 import { useGetCoursesQuery } from '../../serviceQuery/courses'
 import { allCoursesSelector } from '../../store/selectors/courses'
-
+import styles from './main-page.css'
 export const MainPage = ({theme}) => {
     const dispatch = useDispatch();
     const [errorFetch, setErrorFetch] = useState(null)
@@ -34,23 +34,23 @@ export const MainPage = ({theme}) => {
 
     return (
         <MainLayout theme={theme} isLoading={isLoading}>
-            <S.MainInfo>
-                <S.MainTitleBox>
-                    <S.MainSuperTitle>
+            <div className={styles.mainInfo}>
+                <div className={styles.mainTitleBox}>
+                    <p className={styles.mainSuperTitle}>
                         Онлайн-тренировки для занятий дома
-                    </S.MainSuperTitle>
-                    <S.MainTitle>
+                    </p>
+                    <h1 className={styles.mainTitle}>
                         Начните заниматься спортом и улучшите качество жизни
-                    </S.MainTitle>
-                </S.MainTitleBox>
-                <S.MainImg src="/img/sale-sticker.svg" alt="sale-sticker" />
-            </S.MainInfo>
-            <S.MainCards>
+                    </h1>
+                </div>
+                <img className={styles.mainImg} src="/img/sale-sticker.svg" alt="sale-sticker" />
+            </div>
+            <div className={styles.mainCards}>
                 {workout.map(({_id, nameEN, nameRU}) => {
                     return <FitnessCard title={nameRU} img={nameEN} key={_id} path={_id} />
                 })}
-            </S.MainCards>
-            <S.MainButtonUp onClick={handlerScrollToTop}>Наверх ↑</S.MainButtonUp>
+            </div>
+            <button className={styles.mainButtonUp} onClick={handlerScrollToTop}>Наверх ↑</button>
         </MainLayout>
     );
 }

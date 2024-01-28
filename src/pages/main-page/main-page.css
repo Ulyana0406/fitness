@@ -1,43 +1,41 @@
-import styled from "styled-components";
-
-export const MainInfo = styled.div`
+.mainInfo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-`
+} 
 
-export const MainTitleBox = styled.div`
+.mainTitleBox {
     width: 850px;
-`
+} 
 
-export const MainSuperTitle = styled.p`
+.mainSuperTitle {
     margin-bottom: 17px;
     color: var(--monochrome-white-20);
     opacity: 0.5;
     font-size: 20px;
     line-height: 1.15;
     letter-spacing: -0.05px;
-`
+} 
 
-export const MainTitle = styled.h1`
+.mainTitle {
     color: var(--color-text-light-grey);
     font-size: 60px;
     line-height: 0.9;
     letter-spacing: -1.169px;
-`
+} 
 
-export const MainImg = styled.img`
-    margin-right: -75px;
-`
+.mainImg {
+    margin-right: -75px; 
+} 
 
-export const MainCards = styled.div`
+.mainCards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 44px 37px;
     margin-bottom: 34px;
-`
+} 
 
-export const MainButtonUp = styled.button`
+.mainButtonUp {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -54,12 +52,14 @@ export const MainButtonUp = styled.button`
     background: var(--color-text-light-green);
     transition: all 0.2s ease-in-out;
     cursor: pointer;
+} 
+  
 
-    &:hover {
+.mainButtonUp:hover {
         background: var(--color-text-light-green-hover);
     }
 
-    &:active {
+.mainButtonUp:active {
         background: var(--color-text-light-green-active);
     }
-`
+

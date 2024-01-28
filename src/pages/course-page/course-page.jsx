@@ -9,7 +9,7 @@ import { currentCourseSelector } from '../../store/selectors/courses'
 import { useGetCourseQuery } from '../../serviceQuery/courses'
 import { setCurrentCourse, setCurrentPage } from '../../store/slices/courses'
 import { useNavigate  } from "react-router-dom";
-
+import styles from './course-page.css'
 export const CoursePage = ({theme, isShowButton}) => {
     const [show, setShow] = useState(false)
     const auth = localStorage.getItem('auth')
@@ -38,55 +38,55 @@ export const CoursePage = ({theme, isShowButton}) => {
 
     return (
         <MainLayout theme={theme} isShowButton={isShowButton} isLoading={isLoading}>
-            <S.CoursePageContainer>
-                <S.TitleBox>
-                    <S.Title>{course.nameRU}</S.Title>
+            <div className={styles.coursePageContainer}>
+                <div className={styles.titleBox}>
+                    <h1 className={styles.title}>{course.nameRU}</h1>
                     <img src={`/img/page-img/${course.nameEN}.svg`} alt={course.nameRU} />
-                </S.TitleBox>
+                </div>
                 
-                <S.About>
-                    <S.AboutTitle>Подойдет для вас, если:</S.AboutTitle>
-                    <S.AboutList>
+                <div>
+                    <h3 className={styles.aboutTitle}>Подойдет для вас, если:</h3>
+                    <ul className={styles.aboutList}>
                         {course.fitting?.map((item, index) => {
                             return (
-                                <S.AboutListItem key={index}>
-                                    <S.AboutListItemIndex>
+                                <li className={styles.aboutListItem} key={index}>
+                                    <span className={styles.aboutListItemIndex}>
                                         {index + 1}
-                                    </S.AboutListItemIndex>
+                                    </span>
                                     {item}
-                                </S.AboutListItem>
+                                </li>
                             );
                         })}
-                    </S.AboutList>
-                </S.About>
+                    </ul>
+                </div>
 
-               <S.Directions>
-                    <S.AboutTitle>Направления:</S.AboutTitle>
-                    <S.DirectionsList>
+               <div>
+                    <h3 className={styles.aboutTitle}>Направления:</h3>
+                    <ul className={styles.directionsList}>
                         {course.directions?.map((item, index) => {
                             return (
-                                <S.DirectionsListItem key={index}>
+                                <li className={styles.directionsListItem} key={index}>
                                     {item}
-                                </S.DirectionsListItem>
+                                </li>
                             );
                         })}
-                    </S.DirectionsList>
-                </S.Directions>
+                    </ul>
+                </div>
 
-                <S.Text>
+                <p>
                     {course.description}
-                </S.Text>
+                </p>
 
-                <S.SubmitApplication>
-                    <S.SubmitApplicationText>
+                <div className={styles.submitApplication}>
+                    <p className={styles.submitApplicationText}>
                         Оставьте заявку на пробное занятие, мы свяжемся 
                         с вами, поможем с выбором направления и тренера, с которым тренировки принесут здоровье и радость!
-                    </S.SubmitApplicationText>
+                    </p>
                     <BaseButton action={() => handleLoginClick({auth})} theme='dark' text='Записаться на тренировку' />
-                    <S.SubmitApplicationImg src="/img/phone.svg" alt="phone" />
-                </S.SubmitApplication>
+                    <img className={styles.submitApplicationImg} src="/img/phone.svg" alt="phone" />
+                </div>
                 {show && <ProgressBlock text = 'Вы успешно записались!' setShow={setShow}/>} 
-            </S.CoursePageContainer>
+            </div>
         </MainLayout>
     );
 };
