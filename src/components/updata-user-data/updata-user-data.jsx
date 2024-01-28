@@ -1,7 +1,7 @@
 import * as S from './updata-user-data.styles.js';
 import { useState } from 'react';
 import { Logo } from "../logo/logo.jsx";
-
+import styles from './updata-user-data.css'
 export const UpdateUserData = ({isLoginMode, setIsActive}) => {
   const [error, setError] = useState(null);
   const [login, setLogin] = useState('');

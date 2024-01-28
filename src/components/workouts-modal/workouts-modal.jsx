@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import * as S from './workouts-modal.style';
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
-
+import styles from './workouts-modal.css'
 export const WorkoutsModal = ({ action, data, courseId }) => {
     const navigate = useNavigate()
 
@@ -11,24 +11,24 @@ export const WorkoutsModal = ({ action, data, courseId }) => {
     }
 
     return (
-        <S.WorkoutsModal>
-            <S.WorkoutsModalWrapper>
-                <S.WorkoutsModalClose src='/img/close.svg' alt='close' onClick={action}/>
-                <S.WorkoutsModalTitle>
+        <div className={styles.workoutsModal}>
+            <div className={styles.workoutsModalWrapper}>
+                <img className={styles.workoutsModalClose} src='/img/close.svg' alt='close' onClick={action}/>
+                <h3 className={styles.workoutsModalTitle}>
                     Выберите тренировку
-                </S.WorkoutsModalTitle>
-                <S.WorkoutsModalContent>
+                </h3>
+                <div className={styles.workoutsModalContent}>
                     {data.map((item) => {
                         return (
-                            <S.WorkoutsModalItem key={item._id} onClick={() => handleNavigate(item._id)}>
-                                <S.WorkoutsModalItemTitle>
+                            <div className={styles.workoutsModalItem} key={item._id} onClick={() => handleNavigate(item._id)}>
+                                <h5 className={styles.workoutsModalItemTitle}>
                                     {item.name}
-                                </S.WorkoutsModalItemTitle>
-                            </S.WorkoutsModalItem>
+                                </h5>
+                            </div>
                         )
                     })}
-                </S.WorkoutsModalContent>
-            </S.WorkoutsModalWrapper>
-        </S.WorkoutsModal>
+                </div>
+            </div>
+        </div>
     )
 }

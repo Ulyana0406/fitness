@@ -7,7 +7,7 @@ import { Logo } from '../../components/logo/logo'
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../Firebase.js'
 import { setAuth } from '../../store/slices/auth'
-
+import styles from './auth-page.css'
 export const AuthPage = ({theme}) => {
   const [isLoginMode, setIsLoginMode] = useState(true)
   const dispatch = useDispatch()
@@ -128,14 +128,14 @@ export const AuthPage = ({theme}) => {
 
   return (
     <MainLayout theme={theme} isShowButton = {false}>
-    <S.PageContainer>
+    <div className={styles.pageContainer}>
 
-        <S.ModalForm>
+        <div className={styles.modalForm}>
             <Logo theme="black" onClick={() => setIsLoginMode(true)}/>
             {isLoginMode ? (
             <>
-                <S.Inputs>
-                    <S.ModalInput
+                <div className={styles.inputs}>
+                    <input className={styles.modalInput}
                       type="email"
                       name="login"
                       placeholder="Логин"
@@ -144,7 +144,7 @@ export const AuthPage = ({theme}) => {
                       setEmail(event.target.value)
                       }}
                     />
-                    <S.ModalInput
+                    <input className={styles.modalInput}
                       type="password"
                       name="password"
                       placeholder="Пароль"
@@ -153,57 +153,57 @@ export const AuthPage = ({theme}) => {
                       setPassword(event.target.value)
                       }}
                     />
-                </S.Inputs>
-                {error && <S.Error>{error}</S.Error>}
-                <S.Buttons>
-                  <S.PrimaryButton
+                </div>
+                {error && <div className={styles.error}>{error}</div>}
+                <div className={styles.buttons}>
+                  <button className={styles.primaryButton}
                     disabled={buttonActive}
                     onClick={() => handleLogin({ email, password })}
                   >
                     {buttonActive ? 'Выполняется вход...' : 'Войти'}
-                  </S.PrimaryButton>
+                  </button>
                   <Link onClick={() => setIsLoginMode(false)} to="/auth">
-                    <S.SecondaryButton>Зарегистрироваться</S.SecondaryButton>
+                    <button className={styles.secondaryButton}>Зарегистрироваться</button>
                   </Link>
-                </S.Buttons>
+                </div>
             </>
             ) : (
             <>
-                <S.Inputs>
-                  <S.ModalInput
+                <div className={styles.inputs}>
+                  <input className={styles.modalInput}
                     type="email"
                     name="login"
                     placeholder="Логин"
                     value={email}
                     onChange={(event) => {setEmail(event.target.value)}}
                   />
-                  <S.ModalInput
+                  <input className={styles.modalInput}
                     type="new-password"
                     name="password"
                     placeholder="Пароль"
                     value={password}
                     onChange={(event) => {setPassword(event.target.value)}}
                   />
-                  <S.ModalInput
+                  <input className={styles.modalInput}
                     type="new-password"
                     name="password"
                     placeholder="Повторите пароль"
                     value={repeatPassword}
                     onChange={(event) => {setRepeatPassword(event.target.value)}}
                   />
-                </S.Inputs>
-                {error && <S.Error>{error}</S.Error>}
-                <S.Buttons>
-                  <S.PrimaryButton disabled={buttonActive} onClick={handleRegister}>
+                </div>
+                {error && <div className={styles.error}>{error}</div>}
+                <div className={styles.buttons}>
+                  <button className={styles.primaryButton} disabled={buttonActive} onClick={handleRegister}>
                       {buttonActive
                       ? 'Выполняется регистрация...'
                       : 'Зарегистрироваться'}
-                  </S.PrimaryButton>
-                </S.Buttons>
+                  </button>
+                </div>
             </>
             )}
-        </S.ModalForm>   
-    </S.PageContainer>
+        </div>   
+    </div>
     </MainLayout> 
   )
 }
