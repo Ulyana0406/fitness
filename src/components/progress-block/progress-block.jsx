@@ -1,5 +1,5 @@
 
-import styles from './progress-block.css'
+import styles from './progress-block.module.css'
 export const ProgressBlock = ({ text = 'Ваш прогресс засчитан!', setShow }) => {
 
     return (

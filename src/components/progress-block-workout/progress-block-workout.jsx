@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-
+import styles from './progress-block-workout.module.css'
 export const ProgressBlock = ({ workout, setShow, userProgress, setUserProgress}) => {
     const [buttonActive, setButtonActive] = useState(false);
 

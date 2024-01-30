@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { NavMenu } from '../../components/nav-menu/nav-menu.jsx';
 import { useSelector } from 'react-redux'
 import { currentPageSelector } from '../../store/selectors/courses'
-import styles from './header.css'
+import styles from './header.module.css'
 export const Header = ({theme, isShowButton = true}) => {
     const [showMore, setShowMore] = useState(false)
     const handleMoreClick = () => {setShowMore(!showMore)}

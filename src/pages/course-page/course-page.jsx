@@ -9,7 +9,7 @@ import { currentCourseSelector } from '../../store/selectors/courses'
 import { useGetCourseQuery } from '../../serviceQuery/courses'
 import { setCurrentCourse, setCurrentPage } from '../../store/slices/courses'
 import { useNavigate  } from "react-router-dom";
-import styles from './course-page.css'
+import styles from './course-page.module.css'
 export const CoursePage = ({theme, isShowButton}) => {
     const [show, setShow] = useState(false)
     const auth = localStorage.getItem('auth')

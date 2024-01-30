@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setAllCourses, setCurrentPage } from '../../store/slices/courses'
 import { useGetCoursesQuery } from '../../serviceQuery/courses'
 import { allCoursesSelector } from '../../store/selectors/courses'
-import styles from './main-page.css'
+import styles from './main-page.module.css'
 export const MainPage = ({theme}) => {
     const dispatch = useDispatch();
     const [errorFetch, setErrorFetch] = useState(null)

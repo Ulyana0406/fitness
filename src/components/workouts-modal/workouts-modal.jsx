@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import * as S from './workouts-modal.style';
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
-import styles from './workouts-modal.css'
+import styles from './workouts-modal.module.css'
 export const WorkoutsModal = ({ action, data, courseId }) => {
     const navigate = useNavigate()
 

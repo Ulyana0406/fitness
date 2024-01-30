@@ -1,5 +1,5 @@
 import * as S from '../nav-menu/nav-menu.styles';
-import styles from './nav-menu.css'
+import styles from './nav-menu.module.css'
 export const NavMenu = ({page}) => {
   const handleLogout = () => {
     localStorage.removeItem('auth');

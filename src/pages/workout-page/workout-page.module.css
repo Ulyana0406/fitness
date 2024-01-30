@@ -1,0 +1,352 @@
+
+.title { font-size: 48px;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 40px;}
+   
+.workoutText{
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+} 
+
+.workoutVideo{ 
+    width: 1160px;
+    height: 639px;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    margin: 40px 0 75px 0;
+    overflow: hidden;
+} 
+
+.workoutBlock {
+    display: flex;
+    justify-content: space-between;
+} 
+
+.workoutExerciseHeader {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 30px;
+} 
+
+.workoutExerciseTextBox {
+    padding-left: 30px;
+    margin-bottom: 10px;
+    list-style-type: disc;
+} 
+
+.workoutExerciseText {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: list-item;
+    list-style-type: disc;
+} 
+
+.workoutExerciseButton {
+    border-radius: 46px;
+    background: #580EA2;
+    padding: 12px 27px 16px 28px;
+    margin-top: 40px;
+    cursor: pointer;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.05px;
+    text-align: left;
+    color: #FAFAFA;
+} 
+
+.workoutProgress {
+    background: #F2F2F2;
+    border-radius: 30px;
+    padding: 32px 44px;} 
+
+.workoutProgressHeader {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 30px;
+} 
+
+.workoutProgressBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+} 
+
+.workoutProgressContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 34px;
+} 
+
+.workoutProgressText {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 227px;
+} 
+
+
+
+.workoutProgressBarSpan {
+    position: absolute;
+    right: -4rem;
+
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+} 
+
+.workoutProgressBarSpanFull {
+    position: relative;
+    right: -4rem;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    padding-left: 50px
+} 
+
+.modal {
+    height: 400px;
+    width: 400px;
+    background-color: red;
+    position:absolute;
+} 
+
+.modalContentText {
+    background-color: rgba(0, 0, 0, 0);
+    color: #FFF;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: StratosSkyeng;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    padding-top: 16px;
+} 
+.modalContentText:hover{
+    color: #B672FF;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: StratosSkyeng;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration-line: underline;
+}
+ 
+.pageContainer {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.modalForm2 {
+    width: 444px;
+    height: 554px;
+    border-radius: 12px;
+    background: #FFF;
+} 
+.modalForm2::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    /* Track */
+    .modalForm2::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.05);
+    }
+
+    /* Handle */
+    .modalForm2::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.15);
+    }
+
+.fixedOverlayModal {
+    text-align: center;
+    white-space: nowrap;  
+}
+.fixedOverlayModal::after {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
+    content: '';
+}  
+
+.modalWindow {
+    display: inline-block;
+    vertical-align: middle;
+} 
+
+.modalContainer {
+    margin: 50px;
+    padding: 20px;
+    min-width: 200px;
+    text-align: left;
+    white-space: normal;
+    background-color: #fff;    
+    color: #000;
+} 
+
+.closeArea {
+    position: absolute;
+    z-index: 999;
+    top: 0px;
+    right: 0px;
+    padding: 10px;
+    cursor: pointer;
+} 
+
+.closeButton {  
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.progressBox {
+    border-radius: 12px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 36px 42px 44px;
+} 
+
+.progressBoxTitle {
+    color: #000;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+} 
+
+.resultInputBox {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 12px;
+    width: 361px;
+    height: 75px;
+} 
+
+.resultInputText {
+    color: #000;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.05px;
+} 
+
+.resultInput {
+    height: 28px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid;
+    border-color:#D0CECE;
+    text-align: left;
+    display: block;
+    outline: none;
+} 
+
+.resultInputButton {
+    outline: none;
+    border: none;
+    border-radius: 5rem;
+    padding: 12px 1rem 16px;
+    min-width: 17rem;
+    font-size: 1.25rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(88, 14, 162);
+    margin-top: 20px;
+    cursor: pointer;
+} 
+
+.progressMain {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0px; 
+    top: 0px; 
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pageClose {
+    position: absolute;
+    z-index: 999;
+    top: 0px;
+    right: 0px;
+    padding: 10px;
+    cursor: pointer;} 
+
+.progressBlock{
+    background-color: white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 36px 42px 0 44px;
+    position: relative;
+    width: 444px;
+    height: 360px;
+} 
+
+.progressText {
+    position: absolute;
+    padding: 4px 88px 200px;
+    font-size: 2rem;
+} 
+
+.error {
+    color: coral;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 10px;
+    margin-bottom: -20px;
+    text-align: left;
+} 

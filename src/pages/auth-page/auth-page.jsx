@@ -7,7 +7,7 @@ import { Logo } from '../../components/logo/logo'
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../Firebase.js'
 import { setAuth } from '../../store/slices/auth'
-import styles from './auth-page.css'
+import styles from './auth-page.module.css'
 export const AuthPage = ({theme}) => {
   const [isLoginMode, setIsLoginMode] = useState(true)
   const dispatch = useDispatch()

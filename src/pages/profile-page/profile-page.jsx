@@ -8,7 +8,7 @@ import { WorkoutsModal } from '../../components/workouts-modal/workouts-modal';
 import { useSelector, useDispatch } from 'react-redux'
 import { setAllWorkouts, setCurrentPage } from '../../store/slices/courses'
 import { currentCourseSelector } from '../../store/selectors/courses'
-import styles from './profile-page.css'
+import styles from './profile-page.module.css'
 export const ProfilePage = () => {
     const dispatch = useDispatch();
     const [isLoginMode, setIsLoginMode] = useState(null);
