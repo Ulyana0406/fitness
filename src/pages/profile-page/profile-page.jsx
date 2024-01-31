@@ -66,14 +66,14 @@ export const ProfilePage = () => {
                     <h1 className={styles.mainTitle}>Мой профиль</h1>
                     <div className={styles.mainTextBlock}>
                         <p className={styles.mainText}>Логин: {user.userName}</p>
-                        <p>Пароль: 12345678</p>
+                
                     </div>
                     <div className={styles.mainButtonBlock}>
                         <button className={styles.mainButton} type="button"  onClick={() => handleLoginClick()} >Изменить логин</button>
                         <button className={styles.mainButton} type="button"  onClick={() => handlePasswordClick()}>Изменить пароль</button>
                     </div>
                 </div> 
-                <div>
+                <div className={styles.mainCards}>
                     {userFitnessCards.map(({title, img, id}) => {
                         return (
                             <div className={styles.fitnessCard} key={title} onClick={() => handleShowWorkoutsModal(id)}>

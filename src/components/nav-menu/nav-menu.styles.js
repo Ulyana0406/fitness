@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 
 export const MenuLink = styled(NavLink)`
-  color: #000000;
+  color: white;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;

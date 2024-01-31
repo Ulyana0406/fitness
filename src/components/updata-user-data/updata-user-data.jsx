@@ -1,4 +1,4 @@
-import * as S from './updata-user-data.styles.js';
+
 import { useState } from 'react';
 import { Logo } from "../logo/logo.jsx";
 import styles from './updata-user-data.module.css'
@@ -92,7 +92,7 @@ export const UpdateUserData = ({isLoginMode, setIsActive}) => {
               <div className={styles.inputs}>
                 <h1 className={styles.inputTitle}>Новый пароль:</h1>
                 <input className={styles.modalInput}
-                    type="new-password"
+                    type="password"
                     name="password"
                     placeholder="Пароль"
                     value={password}
@@ -101,7 +101,7 @@ export const UpdateUserData = ({isLoginMode, setIsActive}) => {
                     }}
                 />
                 <input className={styles.modalInput}
-                    type="new-password"
+                    type="password"
                     name="password"
                     placeholder="Повторите пароль"
                     value={repeatPassword}

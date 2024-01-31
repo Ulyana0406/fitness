@@ -1,5 +1,4 @@
 import { FitnessCard } from '../../components/fitness-card/fitness-card';
-import * as S from './main-page.styles';
 import { MainLayout } from '../../layouts/main-layout/main-layout';
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';

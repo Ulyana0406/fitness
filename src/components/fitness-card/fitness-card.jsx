@@ -3,7 +3,7 @@ import * as S from './fitness-card.styles'
 import styles from'./fitness-card.module.css'
 export const FitnessCard = ({title, img, path}) => {
     return (
-        <S.FitnessCard to={`/course/${path}`}> //вот тут я хрен знает как сделать , там NavLink
+        <S.FitnessCard to={`/course/${path}`}> 
             <h className={styles.fitnessCardTitle}>
                 {title}
             </h>

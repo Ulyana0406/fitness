@@ -1,5 +1,4 @@
 import { Link, useNavigate } from 'react-router-dom'
-import * as S from './auth-page.styles'
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { MainLayout } from '../../layouts/main-layout/main-layout';
@@ -178,14 +177,14 @@ export const AuthPage = ({theme}) => {
                     onChange={(event) => {setEmail(event.target.value)}}
                   />
                   <input className={styles.modalInput}
-                    type="new-password"
+                    type="password"
                     name="password"
                     placeholder="Пароль"
                     value={password}
                     onChange={(event) => {setPassword(event.target.value)}}
                   />
                   <input className={styles.modalInput}
-                    type="new-password"
+                    type="password"
                     name="password"
                     placeholder="Повторите пароль"
                     value={repeatPassword}

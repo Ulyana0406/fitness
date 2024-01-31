@@ -19,7 +19,7 @@ export const MainLayout = ({children, theme, isShowButton, isLoading = false}) =
         <> 
             {(isLoading || isLoadingPreloader) && <Preloader />}
             <Header theme={theme} isShowButton={isShowButton} />
-            <main className={styles.main} $theme={theme}>
+            <main className={styles.main} >
                 <Container>
                     {children}
                 </Container>

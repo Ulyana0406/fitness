@@ -7,7 +7,8 @@
     z-index: 999;
     width: 100%;
     padding: 24px 0;
-    background-color: var(--color-main-bg-light)
+    background-color: var(--color-main-bg-dark)
+
 }
     
 .headerContainer {
@@ -48,6 +49,7 @@
 
 
 .profileMail {
+    color:white;
     font-family: 'StratosSkyeng', sans-serif;
     font-size: 24px;
     line-height: 32px;
